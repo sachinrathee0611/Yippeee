@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automated CI/CD Deployment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-area">
+                <span class="status-badge live">LIVE</span>
+                <h1>Pipeline Status Dashboard</h1>
+            </div>
+            <p class="subtitle">Continuous Integration & Continuous Deployment Verification Page</p>
+        </header>
+
+        <main>
+            <section class="card status-section">
+                <h2>Deployment Matrix</h2>
+                <div class="grid">
+                    <div class="grid-item">
+                        <span class="label">Provider</span>
+                        <span class="value">Amazon Web Services (AWS)</span>
+                    </div>
+                    <div class="grid-item">
+                        <span class="label">Environment</span>
+                        <span class="value">EC2 Container Instance</span>
+                    </div>
+                    <div class="grid-item">
+                        <span class="label">WebServer</span>
+                        <span class="value">Nginx Alpine Linux</span>
+                    </div>
+                    <div class="grid-item">
+                        <span class="label">Automation</span>
+                        <span class="value">Jenkins Pipeline</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card details-section">
+                <h2>Runtime Metadata</h2>
+                <ul>
+                    <li><strong>Deployment Time:</strong> <span id="deploy-time">Loading...</span></li>
+                    <li><strong>Connection Status:</strong> <span class="text-success">Secure (Port 80)</span></li>
+                    <li><strong>Container Health:</strong> <span class="text-success">Healthy</span></li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>Automated Pipeline Project &copy; 2026</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
