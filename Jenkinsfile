@@ -27,7 +27,7 @@ pipeline {
             steps {
                 // Uses the "Pipeline: AWS Steps" plugin to upload the workspace files
                 // Relies on the IAM Instance Profile attached to the EC2 instance for permissions
-                s3Upload(file: '*', bucket: "${S3_BUCKET_NAME}", path: "builds/build-${env.BUILD_ID}/")
+                s3Upload(bucket: "${S3_BUCKET_NAME}", includePathPattern: '**/*', path: "builds/build-${env.BUILD_ID}/")
             }
         }
 
